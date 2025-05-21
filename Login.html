@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Login - Battle Mania</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #880909, #550101);
+            color: #c6d4df;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, #880909, #550101);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f46666;
+        }
+
+        .navbar .menu a {
+            margin: 0 15px;
+            color: #c6d4df;
+            text-decoration: none;
+        }
+
+        .navbar .menu a:hover {
+            color: white;
+        }
+
+        .banner {
+            background-image: url('Battle Mania.png');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .banner h1 {
+            font-size: 48px;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            padding: 40px 20px;
+        }
+
+        .login-box {
+            background-color: #800d0d;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .login-box h2 {
+            color: #f46666;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c6d4df;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #3e0a0a;
+            border: 1px solid #550101;
+            border-radius: 5px;
+            color: #c6d4df;
+            font-size: 16px;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #f46666;
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+        }
+
+        .remember-me input {
+            margin-right: 8px;
+        }
+
+        .forgot-password a {
+            color: #f46666;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #d22b2b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .login-btn:hover {
+            background-color: #f46666;
+        }
+
+        .social-login {
+            margin-bottom: 20px;
+        }
+
+        .social-login p {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .social-login p::before,
+        .social-login p::after {
+            content: "";
+            display: inline-block;
+            width: 30%;
+            height: 1px;
+            background-color: #3e0a0a;
+            position: absolute;
+            top: 50%;
+        }
+
+        .social-login p::before {
+            left: 0;
+        }
+
+        .social-login p::after {
+            right: 0;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #3e0a0a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: #f46666;
+        }
+
+        .register-link {
+            color: #7f8c8d;
+        }
+
+        .register-link a {
+            color: #f46666;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #3e0a0a;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Battle Mania</div>
+        <div class="menu">
+            <a href="Index.html">Home Page</a>
+            <a href="About.html">About</a>
+            <a href="Library.html">Library</a>
+            <a href="Community.html">Community</a>
+            <a href="Support.html">Support</a>
+            <a href="Login.html">Login</a>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h1>Welcome Back, Warrior</h1>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login to Your Account</h2>
+            
+            <form>
+                <div class="input-group">
+                    <label for="username">Username or Email</label>
+                    <input type="text" id="username" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                
+                <div class="remember-forgot">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </div>
+                
+                <button type="submit" class="login-btn">LOGIN</button>
+                <!-- Social Login -->
+               <div class="social-login">
+    <p>Or login with</p>
+    <div class="social-icons">
+        <a href="#" class="social-icon">
+            <img src="Google.png" alt="Google Login" width="24" height="24">
+        </a>
+        <a href="#" class="social-icon">
+            <img src="Facebook.png" alt="Facebook Login" width="24" height="24">
+        </a>
+        <a href="#" class="social-icon">
+            <img src="X logo.png" alt="X Login" width="24" height="24">
+        </a>
+        <a href="#" class="social-icon">
+            <img src="Steam.png" alt="Steam Login" width="24" height="24">
+        </a>
+    </div>
+</div>
+                <!--register-->
+                <p class="register-link">
+                    Don't have an account? <a href="#">Register now</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Battle Mania. Not affiliated with Valve Corporation.
+    </footer>
+
+</body>
+</html>

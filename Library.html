@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Library - Battle Mania</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #880909, #550101);
+            color: #c6d4df;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, #880909, #550101);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f46666;
+        }
+
+        .navbar .menu a {
+            margin: 0 15px;
+            color: #c6d4df;
+            text-decoration: none;
+        }
+
+        .navbar .menu a:hover {
+            color: white;
+        }
+
+        .banner {
+            background-image: url('Battle Mania.png');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .banner h1 {
+            font-size: 48px;
+        }
+
+        .library {
+            padding: 40px 30px;
+        }
+
+        .library h2 {
+            margin-bottom: 20px;
+            color: #f46666;
+            font-size: 32px;
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .category-tabs button {
+            background: #800d0d;
+            border: none;
+            padding: 8px 15px;
+            color: #c6d4df;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .category-tabs button:hover, .category-tabs button.active {
+            background: #f46666;
+            color: #1a1a1a;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        a.game-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .game-card {
+            background-color: #800d0d;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .game-card:hover {
+            transform: scale(1.03);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+
+        .game-card .info {
+            padding: 10px;
+        }
+
+        .game-card .info h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .game-card .info p {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .price {
+            color: #d0ab07;
+            font-weight: bold;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #3e0a0a;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+        .tag.fps { background: #d22b2b; }
+        .tag.horror { background: #5e0a0a; }
+        .tag.gore { background: #3a0000; }
+        .tag.action { background: #8a2e2e; }
+        .tag.adventure { background: #a40c0c; }
+
+        footer {
+            background-color: #3e0a0a;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Battle Mania</div>
+        <div class="menu">
+            <a href="Index.html">Home Page</a>
+            <a href="About.html">About</a>
+            <a href="Library.html">Library</a>
+            <a href="Community.html">Community</a>
+            <a href="Support.html">Support</a>
+            <a href="Login.html">Login</a>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h1>Game Library</h1>
+    </div>
+
+    <!-- Library Content -->
+    <div class="library">
+        <h2>Blood-Pumping Games</h2>
+        
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+            <button class="active">All</button>
+            <button>FPS</button>
+            <button>Horror</button>
+            <button>Gore</button>
+            <button>Action</button>
+            <button>Adventure</button>
+        </div>
+
+        <!-- Games Grid -->
+        <div class="games-grid">
+            <!-- Game 1: DOOM: DARK AGES-->
+             <a href="https://store.steampowered.com/app/3017860/DOOM_The_Dark_Ages/" class="game-link" target="_blank">
+                <div class="game-card">
+                    <img src="Doom Dark Ages.jpg" alt="DOOM: Dark Ages">
+                    <div class="info">
+                        <h3>DOOM: Dark Ages</h3>
+                        <p>Rip and tear through demon hordes in this ultra-violent FPS.</p>
+                        <span class="tag fps">FPS</span>
+                        <span class="tag gore">GORE</span>
+                        <p class="price">269.00 AED</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Game 2: RED DEAD REDEMTION --> 
+            <a href="https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/" class="game-link" target="_blank">
+                <div class="game-card">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg" alt="Red Dead Redemption 2">
+                    <div class="info">
+                        <h3>Red Dead Redemption 2</h3>
+                        <p>RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang, on the run across America at the dawn of the modern age.</p>
+                        <span class="tag horror">ACTION</span>
+                        <span class="tag adventure">ADVENTURE</span>
+                        <p class="price">229.00 AED</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Game 3: COD:WARZONE -->
+            <a href="https://store.steampowered.com/app/1962663/Call_of_Duty_Warzone/" class="game-link" target="_blank">
+                <div class="game-card">
+                    <img src="COD_Warzone_Cover_Art.jpg" alt="COD: WARZONE">
+                    <div class="info">
+                        <h3>COD: WARZONE</h3>
+                        <p>High-octane tactical FPS with brutal executions.</p>
+                        <span class="tag fps">FPS</span>
+                        <span class="tag action">ACTION</span>
+                        <p class="price">FREE</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Game 4: PHASMOPHOBIA -->
+            <a href="https://store.steampowered.com/app/739630/Phasmophobia/" class="game-link" target="_blank">
+                <div class="game-card">
+                    <img src="phasmophobia.jpg" alt="Phasmophobia">
+                    <div class="info">
+                        <h3>Phasmophobia</h3>
+                        <p>A mind-bending horror experience where reality decays.</p>
+                        <span class="tag horror">HORROR</span>
+                        <span class="tag fps">FPS</span>
+                        <p class="price">53.00 AED</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Game 5: ELDEN RING -->
+            <a href="https://store.steampowered.com/app/1245620/ELDEN_RING/" class="game-link" target="_blank">
+                <div class="game-card">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg" alt="ELDEN RING">
+                    <div class="info">
+                        <h3>ELDEN RING</h3>
+                        <p>Survive a zombie outbreak with brutal melee combat.</p>
+                        <span class="tag action">ACTION</span>
+                        <span class="tag gore">GORE</span>
+                        <p class="price">249.00 AED</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Game 6: PUBG -->
+            <a href="https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS" class="game-link" target="_blank">
+                <div class="game-card">
+                    <img src="pubg-go20ghrcj4ybxhvq.jpg" alt="pubg">
+                    <div class="info">
+                        <h3>PUBG</h3>
+                        <p>Face Unknown players on the field.</p>
+                        <span class="tag fps">FPS</span>
+                        <span class="tag action">ACTION</span>
+                        <p class="price">FREE</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Battle Mania. Not affiliated with Valve Corporation.
+    </footer>
+
+</body>
+</html>

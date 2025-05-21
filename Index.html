@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Battle Mania</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+body {
+  font-family: Arial, sans-serif;
+  /* Gradient from dark reddish-brown to a lighter tone */
+  background: linear-gradient(to bottom, #880909, #550101);
+  color: #c6d4df;
+}
+
+    .navbar {
+      background:linear-gradient(to bottom, #880909, #550101);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f46666;
+    }
+
+    .navbar .menu a {
+      margin: 0 15px;
+      color: #c6d4df;
+      text-decoration: none;
+    }
+
+    .navbar .menu a:hover {
+      color: white;
+    }
+
+    .banner {
+      background-image: url('Battle Mania.png');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .banner h1 {
+      font-size: 48px;
+    }
+
+    .store {
+      padding: 40px 30px;
+    }
+
+    .store h2 {
+      margin-bottom: 20px;
+      color: #f46666;
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    a.game-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .game-card {
+      background-color: #800d0d;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+
+    .game-card:hover {
+      transform: scale(1.03);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .game-card .info {
+      padding: 10px;
+    }
+
+    .game-card .info h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      color: #d0ab07;
+    }
+
+    footer {
+      background-color: #3e0a0a;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #7f8c8d;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Battle Mania</div>
+    <div class="menu">
+      <a href="Website2.html">Home Page</a>
+      <a href="About.html">About</a>
+      <a href="Library.html">Library</a>
+      <a href="Community.html">Community</a>
+      <a href="Support.html">Support</a>
+      <a href="Login.html">Login</a>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Welcome to Battle Mania</h1>
+  </div>
+
+  <!-- Store Section -->
+  <div class="store">
+    <h2>Featured Games</h2>
+    <div class="games-grid" id="gamesGrid">
+      <!-- Game cards will be inserted here -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Battle Mania. Not affiliated with Valve Corporation.
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const games = [
+  {
+    title: "PUBG",
+    image: "pubg-go20ghrcj4ybxhvq.jpg",
+    price: "FREE",
+    link: "https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS"
+  },
+  {
+    title: "Elden Ring",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg",
+    price: "249.00 AED",
+    link: "https://store.steampowered.com/app/1245620/ELDEN_RING/"
+  },
+  {
+    title: "Red Dead Redemption 2",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg",
+    price: "229.00 AED",
+    link: "https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/"
+  },
+{
+  title: "Doom: Dark Ages",
+  image: "Doom Dark Ages.jpg",
+  price: "269.00 AED",
+  link: "https://store.steampowered.com/app/3017860/DOOM_The_Dark_Ages/"
+}
+];
+
+games.forEach(game => {
+  const cardLink = document.createElement('a');
+  cardLink.href = game.link;
+  cardLink.className = 'game-link';
+  cardLink.innerHTML = `
+    <div class="game-card">
+      <img src="${game.image}" alt="${game.title}">
+      <div class="info">
+        <h3>${game.title}</h3>
+        <p class="price">${game.price}</p>
+      </div>
+    </div>
+  `;
+
+  gamesGrid.appendChild(cardLink);
+});
+
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>About - Battle Mania</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      /* Gradient from dark reddish-brown to a lighter tone */
+      background: linear-gradient(to bottom, #880909, #550101);
+      color: #c6d4df;
+    }
+
+    .navbar {
+      background:linear-gradient(to bottom, #880909, #550101);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f46666;
+    }
+
+    .navbar .menu a {
+      margin: 0 15px;
+      color: #c6d4df;
+      text-decoration: none;
+    }
+
+    .navbar .menu a:hover {
+      color: white;
+    }
+
+    .banner {
+      background-image: url('Battle Mania.png');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .banner h1 {
+      font-size: 48px;
+    }
+
+    .about-content {
+      padding: 40px 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .about-content h2 {
+      margin-bottom: 20px;
+      color: #f46666;
+      font-size: 32px;
+    }
+
+    .about-content p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .team-section {
+      margin-top: 40px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .team-member {
+      background-color: #800d0d;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .team-member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #f46666;
+    }
+
+    .team-member h3 {
+      color: #f46666;
+      margin-bottom: 5px;
+    }
+
+    .team-member p.role {
+      color: #d0ab07;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #3e0a0a;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #7f8c8d;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Battle Mania</div>
+    <div class="menu">
+      <a href="Index.html">Home Page</a>
+      <a href="About.html">About</a>
+      <a href="Library.html">Library</a>
+      <a href="Community.html">Community</a>
+      <a href="Support.html">Support</a>
+      <a href="Login.html">Login</a>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>About Battle Mania</h1>
+  </div>
+
+  <!-- About Content -->
+  <div class="about-content">
+    <h2>Our Story</h2>
+    <p>Founded in 2025, Battle Mania started as a small passion project by a group of gaming enthusiasts. What began as a simple idea to create a platform for action-packed gamers quickly evolved into one of the most exciting gaming hubs on the web.</p>
+    
+    <p>We believe in the power of gaming to bring people together, foster creativity, and provide endless entertainment. Our platform is designed to connect action-packed gamers from around the world, offering a curated selection of the most thrilling battle games available.</p>
+    
+    <h2>Our Mission</h2>
+    <p>At Battle Mania, we're committed to:</p>
+    <p>- Providing a premium selection of action-packed games</p>
+    <p>- Creating a vibrant, inclusive gaming community</p>
+    <p>- Offering seamless gameplay experiences</p>
+    <p>- Supporting both established and indie game developers</p>
+    
+    <div class="team-section">
+      <h2>Meet The Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="DSC_8802.jpg" alt="Team Member">
+          <h3>Christian James</h3>
+          <p class="role">Founder & CEO</p>
+          <p>Gaming veteran with 10+ years in the industry</p>
+        </div>
+        <div class="team-member">
+          <img src="Hans.jpg" alt="Team Member">
+          <h3>Hans Liam</h3>
+          <p class="role">Head of Development</p>
+          <p>Lead our talented team of game developers</p>
+        </div>
+        <div class="team-member">
+          <img src="cian.jpg" alt="Team Member">
+          <h3>Cian David</h3>
+          <p class="role">Community Manager</p>
+          <p>Keep our players engaged and happy</p>
+        </div>
+        <div class="team-member">
+          <img src="Deshaun.jpg" alt="Team Member">
+          <h3>Deshaun Mallan</h3>
+          <p class="role">Marketing Director</p>
+          <p>Spread the word about Battle Mania</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Battle Mania. Not affiliated with Valve Corporation.
+  </footer>
+
+</body>
+</html>
